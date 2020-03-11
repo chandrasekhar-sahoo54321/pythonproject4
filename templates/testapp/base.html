@@ -1,0 +1,105 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/python.css' %}">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-primary bg-primary" >
+      <a href="#" data-toggle="tooltip" data-placement="top" title="see this"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhYsD6LL0vhwOjT9O4kMRvxhopL7AfPJN85eq4n24qyv-mKw21" style="height: 80px;width: 120px;"></a>
+    <h1 style="margin-left: 200px; color: red;">Call us</h1>:<h4 style="color:red;">6303973431</h4>,<h4 style="color:red;">6370504347</h4>
+    <a href="https://www.facebook.com" style="margin-left: 140px;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAWlBMVEU6VZ////82Up4mR5nL0OHS1+YjRZgzUJ1YbatdcKxBWqJ0hLb29/odQpdRZ6ctTJtnebCkrc3l5/Db3uuut9NLYqXr7fSKl8C3vtfDyd0WPpZ8irqRncRvf7NeDmzGAAAA7ElEQVRYhe3U2Q6CMBCFYShLoVLKqri9/2tqYsFWMJ1OaiLJ/JdcfGE7jSKK2nWMLzE8onJR3g9zDVZKRNvFRn2OvJ0htstQEB+PcQiI1Z8MElJVGEhmawcDsWbDwUCyDwMxseUgIH6yhepVmvhCajKZc62n5r+QJDWc6YIfqwXhBraGcAPbgrzf8M/viCArpstNSLIlMFToRuM06sdiuQyUvmz+XasCQVceCCpCPZoIBFXQ1bmgTgaCwCetCxqAX98J3YBf3wndoRNxQdDf6Fmpq82t1fNVMONavwc09z8HG0EEEUQQQQTtC3oAr7gNNkfbZp8AAAAASUVORK5CYII="></a>
+    <a href="https://linkedin.com" style="margin-left: 10px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThMVU6eukq-os3NS5i9YhP_zPc_47TDm6yGTXEtC9H3qFfbA9FqK1z8dJB"></a>
+    <a href="https://www.instagram.com" style="margin-left: 10px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzAwX1-ycg5DtMR5aDqAgwyiv2aiG3OtgJbJvVix0KTTjnsAGgrdSZLIJAiA"></a>
+    <a href="https://www.youtube.com" style="margin-left: 10px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvY90ngHwraDI01Vl_-m4nyngytBCfNMIan2f-KUWBnYufKnFcqpL90sF8"></a>
+    <a href="https://github.com" style="margin-left: 10px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZQ5QNrJr00GOgT9fhbcT2TG0yQ2GqoLf6grddjbaE4AJJJXsK44z5QEkb"></a>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="color:white;">
+    <a class="navbar-brand" href="/" style="margin-left:200px;"><i class="fa fa-home" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="tap for home"></i>Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/about2" style="margin-left:60px;" data-toggle="tooltip" data-placement="top" title="tap for about us">About us<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact2" style="margin-left:60px;" data-toggle="tooltip" data-placement="top" title="tap for contact us">Contact us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 60px;" data-toggle="tooltip" data-placement="top" title="Tap for courses">
+            Courses
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+            <a class="dropdown-item" href="/python" >Python</a>
+            
+
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/java">Java</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/html">HTML5</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/css">CSS</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/django">Django</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/javascript">JavaScript</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/bootstrap">Bootstrap</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/php">PHP</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Servlet</a>
+          </div>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="/jobs" style="margin-left:60px;" data-toggle="tooltip" data-placement="top" title="tap for jobs">Jobs</a>
+        </li>
+
+      </ul>
+       <ul class="navbar-nav ml-auto">
+            {% if  user.is_authenticated %}
+            <li class="nav-item active">
+            <a href="" class="nav-link">welcome {{ user.username }}</a>
+            </li>
+                <li class="nav-item active">
+                    <a href="/logout/" class="nav-link">Logout</a>
+               </li>
+            {% else %}
+            <li class="nav-item active">
+                <a href="/register/" class="nav-link"><i class="fa fa-sign-in" aria-hidden="true"></i>Register</a>
+            </li>
+            <li class="nav-item active">
+                <a href="/login/" class="nav-link"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    {% block body_block %}
+    {% endblock %}
+  </body>
+</html>

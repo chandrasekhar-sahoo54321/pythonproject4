@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% block body_block %}
+<div class="row">
+<dir class="col-sm-6">
+<div class="container">
+
+<h4 style="color: green;">Core Python</h4>
+<p>=======================</p>
+<p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">Class and object</a></p>
+        <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">AttributesInheritance</a></p>
+         <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">Inheritance</a></p>
+          <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">Polymorphism</a></p>
+           <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href=""> Overloading</a></p>
+            <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">Overriding</a></p>
+             <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href=""> Abstraction</a></p>
+             <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href=""> Introduction to PDBC</a></p><br>
+             <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">  Connections</a></p>
+        <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href=""> Executing queries</a></p>
+         <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">MySql</a></p><br>
+          <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href=""> Iterator</a></p>
+        <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">Generator</a></p><br>
+         <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href=""> Decorator</a></p>
+         <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">Closure</a></p><br>
+         <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">Match function</a></p>
+         <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">Search function</a></p>
+         <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href=""> Thread</a></p>
+          <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">Starting a thread</a></p>
+         <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">Threading module</a></p>
+         <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">Synchronizing threads</a></p>
+         <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">Lock</a></p><br>
+         <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href=""> Variou Method</a></p>
+        <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href=""> Assertion</a></p>
+         <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">JSON</a></p>
+          <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">CSV</a></p>
+           <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">DATA VISUALIZATION</a></p><br>
+           <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">PANDAS</a></p>
+        <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">UNPICKLING</a></p>
+         <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">SERIALIZATION</a></p>
+          <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href=""> DE-SERIALIZATION</a></p><br>
+          <p style="margin-left: 40px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp;<a href="">DUCK TYPING</a></p>
+</div>
+	
+</dir>
+<div class="col-sm-6">
+<div class="container" style="margin-left: -200px;">
+<div class="jumbotron" style="color: purple;">
+	<h1 style="color: green;">Class And Object :-</h1>
+	<p>======================================</p><br><br>
+	<h4 style="color: blue;">What is Class   :-</h4>
+	<p>==============================</p>
+	<p>In Python every thing is an object. To create objects we required some Model or Plan or Blue
+print, which is nothing but class.</p><br>
+<p>Class is description about objects property and behavior.</p>
+<p>We can write a class to represent properties (attributes) and actions (behaviour) of object.</p>
+<p>Actions can be represented by Methods.</p>
+<p>Hence class contains both variables and methods.</p>
+<h4 style="color: blue;">Syntax :-</h4>
+<p>==============</p><br>
+<p>class className:</p>
+<p style="margin-left: 50px;">'''documenttation string '''</p>
+<p style="margin-left: 50px;">variables:instance variables,static and local variables</p>
+<p style="margin-left: 50px;">methods: instance methods,static methods,class methods</p><br><br>
+<p>Documentation string represents description of the class. Within the class doc string is always
+optional. We can get doc string by using the following 2 ways.</p>
+<p>1. print(classname.__doc__)</p>
+<p>2. help(classname)</p>
+<h4 style="color: blue;">Example :-</h4>
+<p>==============</p><br>
+<h4 style="color: blue;">code :-</h4>
+<p>=============</p>
+<p>class Student:</p>
+<p style="margin-left: 50px;">'''This is student class with required data'''</p>
+<p>print(Student.__doc__)</p>
+<p>help(Student)</p><br>
+<p>Within the Python class we can represent data by using variables.</p>
+<p>There are 3 types of variables are allowed.</p>
+<p>1. Instance Variables (Object Level Variables)</p>
+<p>2. Static Variables (Class Level Variables)</p>
+<p>3. Local variables (Method Level Variables)</p>
+<p>Within the Python class, we can represent operations by using methods. The following are various
+types of allowed methods</p>
+<p>1. Instance Methods</p>
+<p>2. Class Methods</p>
+<p>3. Static Methods</p>
+<h4 style="color: blue;">Example for class :-</h4>
+<p>=============================</p><br>
+<p>class Student:</p>
+<p style="margin-left: 50px;">'''Developed by durga for python demo'''</p>
+<p style="margin-left: 50px;">def __init__(self):</p>
+<p style="margin-left: 100px;">self.name='durga'</p>
+<p style="margin-left: 100px;">self.age=40</p>
+<p style="margin-left: 50px;">def talk(self):</p>
+<p style="margin-left: 100px;">print("Hello I am :",self.name)</p>
+<p style="margin-left: 100px;">print("My Age is:",self.age)</p><br>
+<h4 style="color: blue;">What is Object :-</h4>
+<p>====================</p><br>
+<p>Pysical existence of a class is nothing but object. We can create any number of objects for a class.</p>
+<p>Syntax to create object: referencevariable = classname()</p>
+<p>Example: s = Student()</p>
+<h4 style="color: blue;">What is Reference Variable :-</h4>
+<p>=============================</p><br>
+<p>The variable which can be used to refer object is called reference variable.</p>
+<p>By using reference variable, we can access properties and methods of object.</p><br>
+<h4 style="color: blue;">Example for class :-</h4>
+<p>=============================</p><br>
+<p>class Student:</p>
+<p style="margin-left: 50px;">'''Developed by durga for python demo'''</p>
+<p style="margin-left: 50px;">def __init__(self):</p>
+<p style="margin-left: 100px;">self.name='durga'</p>
+<p style="margin-left: 100px;">self.age=40</p>
+<p style="margin-left: 50px;">def talk(self):</p>
+<p style="margin-left: 100px;">print("Hello I am :",self.name)</p>
+<p style="margin-left: 100px;">print("My Age is:",self.age)</p><br>
+<p>s1=Student()</p>
+<p>s1.talk()</p>
+	
+</div>
+	
+</div>
+</div>
+	
+</div><br>
+<table>
+<tr>
+<a href="/enquiry" class="btn btn-lg btn-success" style="margin-left: 650px;">Enquiry</a>
+<a href="/next1" class="btn btn-lg btn-secondary" style="margin-left: 40px;">Next</a>
+
+</tr><br><br>
+<div class="row">
+  <div class="col-md-12">
+    <div class="container" style="margin-left:500px;">
+      <div class="spinner-grow text-primary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-secondary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-success" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-danger" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-warning" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-info" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-light" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-dark" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+
+    </div>
+
+  </div>
+
+</div><br><br>
+<footer class="footer footer-expand-lg footer-dark bg-dark text-light">
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+
+          <!-- Grid row -->
+          <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-4 mx-auto">
+
+              <!-- Content -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: green;">Library Rules :</h5>
+              <p>Identity Card is compulsory for getting access to the library</p>
+              <p>Silence to be maintained</p>
+              <p>No discussion permitted inside the library</p>
+              <p>No personal belongings allowed inside the library</p>
+              <p>No discussion permitted inside the library</p>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-2 mx-auto">
+
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: green;">Working Hours of the Library</h5>
+
+              <ul class="list-unstyled" >
+                <li>
+                  <p>Monday to Friday 8 am to 9 pm (During Examination up to 10 PM)</p>
+                </li>
+                <li>
+                <p>Saturday 8 am to 5 pm</p>
+                </li>
+                <li>
+                  <p>Sundays 9 am to 5 pm (During Examination Time)</p>
+                </li>
+
+              </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-2 mx-auto">
+
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: blue;">contact us</h5>
+
+              <ul class="list-unstyled">
+                <li>
+                  <h6>+91-6303973431</h6>
+                </li>
+                <li>
+                  <h6>+91-6370504347</h6>
+                </li>
+                <li>
+                  <a href="#!">Email : sahooc300@gmail.com</a>
+                </li>
+
+              </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-2 mx-auto">
+
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: aqua;">Address</h5>
+
+              <ul class="list-unstyled" style="color: seagreen;">
+                <li>
+                 <h4>Takhatpur</h4>
+                </li>
+                <li>
+                  <h4>Baripada</h4>
+                </li>
+                <li>
+                  <h4>Mayurabhunj</h4>
+                </li>
+                <li>
+                <h4>Odisha</h4>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+        <hr>
+
+
+        <ul class="list-unstyled list-inline text-center py-2">
+          <li class="list-inline-item">
+            <h5 class="mb-1">Register for free</h5>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
+          </li>
+        </ul>
+        <!-- Call to action -->
+
+        <hr>
+
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline text-center">
+          <li class="list-inline-item">
+            <a class="btn-floating btn-fb mx-1">
+              <i class="fab fa-facebook-f"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-tw mx-1">
+              <i class="fab fa-twitter"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-gplus mx-1">
+              <i class="fab fa-google-plus-g"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-li mx-1">
+              <i class="fab fa-linkedin-in"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-dribbble mx-1">
+              <i class="fab fa-dribbble"> </i>
+            </a>
+          </li>
+        </ul>
+        <!-- Social buttons -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+          <a href="https://mdbootstrap.com/education/bootstrap/">Chandra Sekhar Sahoo</a>
+        </div>
+        <!-- Copyright -->
+
+      </footer>
+{% endblock %}

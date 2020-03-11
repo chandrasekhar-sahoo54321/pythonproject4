@@ -1,0 +1,176 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-success">
+        <h5 class="modal-title text-white" id="exampleModalLabel">Book Now</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/book_list/" method="post">
+          {% csrf_token %}
+          <div class="form-group">
+            <input type="text" name="name" class="form-control" placeholder="Enter Your Name">
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" class="form-control" placeholder="Enter your Email">
+          </div>
+          <div class="form-group">
+            <input type="number" name="mobile" class="form-control" placeholder="Enter your mobile number">
+          </div>
+          <div class="form-group">
+            <input type="date" name="birthday" class="form-control" placeholder="Enter your DOB">
+          </div>
+          <div class="d-flex flex-row bd-highlight mb-3">
+            <select name="location">
+              <option>Select Location</option>
+              <option>Bhubaneswar</option>
+              <option>Kolkata</option>
+              <option>Hyderabad</option>
+              <option>Banglore</option>
+            </select>
+          </div>
+           <div class="d-flex flex-row bd-highlight mb-3">
+            <select name="designation">
+              <option>Select Designation</option>
+              <option>Python/Django developer</option>
+              <option>Java fullstack Developer</option>
+              <option>UI Developer</option>
+              <option>Angular Developer</option>
+              <option>AI</option>
+              <option>ML</option>
+              <option>DL</option>
+              <option>Data Science</option>
+              <option>Odoo Developer</option>
+              <option>Support Engineer</option>
+              <option>C developer</option>
+              <option>C++ developer</option>
+              <option>Angular Developer</option>
+              <option>Jira Developer</option>
+              <option>Flask Developer</option>
+              <option>React.js Developer</option>
+              <option>Vue.js Developer</option>
+              <option>Javascript developer</option>
+              <option>MySql developer</option>
+              <option>Oracle Developer</option>
+              <option>Mongo DB developer</option>
+              <option>Digital Marketing</option>
+            </select>
+          </div>
+           <div class="d-flex flex-row bd-highlight mb-3">
+            <select name="qualification">
+              <option>Select Qualification</option>
+              <option>BCA</option>
+              <option>MCA</option>
+              <option>BBA</option>
+              <option>MBA</option>
+              <option>MSC</option>
+              <option>BSC</option>
+              <option>B.Tech</option>
+              <option>M.Tech</option>
+              <option>B.Com</option>
+              <option>M.Com</option>
+            </select>
+          </div>
+           <div class="d-flex flex-row bd-highlight mb-3">
+            <select name="language">
+              <option>Select Language</option>
+              <option>English</option>
+              <option>Hindi</option>
+              <option>Odia</option>
+              <option>Kannada</option>
+              <option>Telugu</option>
+              <option>Marathi</option>
+              <option>Gujurathi</option>
+              <option>Bengali</option>
+              <option>Tamili</option>
+              <option>French</option>
+              <option>Malayalam</option>
+            </select>
+          </div>
+           <div class="d-flex flex-row bd-highlight mb-3">
+            <select name="experience">
+              <option>Select Experience</option>
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+          </div>
+          <div class="d-flex flex-row bd-highlight mb-3">
+            <select name="nationality">
+              <option>Select Nationality</option>
+              <option>Indian</option>
+              <option>Japan</option>
+              <option>America</option>
+              <option>Austrelia</option>
+              <option>Srilanka</option>
+              <option>China</option>
+              <option>Bangaladesh</option>
+              <option>NezLand</option>
+              <option>South Africa</option>
+              <option>West Indies</option>
+            </select>
+          </div>
+          <div class="d-flex flex-row bd-highlight mb-3">
+            <select name="year_of_passout">
+              <option>Select year_of_passout</option>
+              <option>2008</option>
+              <option>2009</option>
+              <option>2010</option>
+              <option>2011</option>
+              <option>2012</option>
+              <option>2013</option>
+              <option>2014</option>
+              <option>2015</option>
+              <option>2017</option>
+              <option>2018</option>
+              <option>2019</option>
+              <option>2020</option>
+              <option>2021</option>
+              <option>2022</option>
+            </select>
+          </div>
+           <div class="d-flex flex-row bd-highlight mb-3">
+            <select name="job_type">
+              <option>Select job_type</option>
+              <option>Full Time</option>
+              <option>Part Time</option>
+              <option>Remotly</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="text" name="current_ctc" class="form-control" placeholder="Enter Your current_ctc">
+          </div>
+          <div class="form-group">
+            <input type="text" name="expected_ctc" class="form-control" placeholder="Enter Your expected_ctc">
+          </div>
+
+
+          <div class="form-group">
+            <input type="radio" name="gender" value="M">Male
+            <input type="radio" name="gender" value="FM">Female
+            <input type="radio" name="gender" value="TG">Other
+          </div>
+          <input type="submit" name="Book" class="btn btn-primary">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="col-md-2">
+    
+  </div>
+</div>

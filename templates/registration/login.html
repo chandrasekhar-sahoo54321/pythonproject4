@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+      <a href="/jobs" data-toggle="tooltip" data-placement="top" title="see this"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhYsD6LL0vhwOjT9O4kMRvxhopL7AfPJN85eq4n24qyv-mKw21" style="height: 80px;width: 120px;"></a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="" style="margin-left: 40px;">Find Jobs<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#" style="margin-left: 40px;">Job Apply<span class="sr-only">(current)</span></a>
+      </li>
+     
+     <li class="nav-item dropdown">
+          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 40px;" data-toggle="tooltip" data-placement="top" title="Tap for courses">
+            RESUME SERVICES
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+            <a class="dropdown-item" href="/xpress">XPRESS RESUME+</a>
+            
+
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="">RIGHT RESUME</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="">CAREER BOOSTER</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="">RESUME HIGHLIGHTER</a>
+            
+          </div>
+        </li>
+       
+    </ul>
+    <ul class="navbar-nav ml-auto">
+     <li class="nav-item active">
+        <a class="nav-link" href="/em" style="margin-left: 200px;">Employers / Post Job<span class="sr-only">(current)</span></a>
+      </li>
+                <li class="nav-item active">
+                    <a href="/accounts/login" class="nav-link"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a>
+               </li>
+            <li class="nav-item active">
+                <a href="/sign" class="nav-link"><i class="fa fa-sign-in" aria-hidden="true"></i>SignUp</a>
+            </li>
+            <li class="nav-item active">
+                <a href="/logout2" class="nav-link">Logout</a>
+            </li>
+        </ul>
+  </div>
+    </nav>
+     <marquee><h2 style="color: red;">welcome to our job site.24 hours responsive.we will touch you every time.every time we update all job.</h2></marquee><br>
+     <h4 style="color: green;margin-left: 600px;">Login Here</h4><br>
+  <div class="container" align="center">
+<div class="jumbotron">
+  <form method="post">
+  {{form.as_p}}
+  {% csrf_token %}
+    <button type="submit" class="btn btn-success">Login</button>
+  </form>
+</div>
+  
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="container" style="margin-left:500px;">
+      <div class="spinner-grow text-primary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-secondary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-success" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-danger" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-warning" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-info" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-light" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-dark" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+
+    </div>
+
+  </div>
+
+</div><br><br>
+
+<footer class="footer footer-expand-lg footer-dark bg-dark text-light">
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+
+          <!-- Grid row -->
+          <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-4 mx-auto">
+
+              <!-- Content -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: green;">Library Rules :</h5>
+              <p>Identity Card is compulsory for getting access to the library</p>
+              <p>Silence to be maintained</p>
+              <p>No discussion permitted inside the library</p>
+              <p>No personal belongings allowed inside the library</p>
+              <p>No discussion permitted inside the library</p>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-2 mx-auto">
+
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: green;">Working Hours of the Library</h5>
+
+              <ul class="list-unstyled" >
+                <li>
+                  <p>Monday to Friday 8 am to 9 pm (During Examination up to 10 PM)</p>
+                </li>
+                <li>
+                <p>Saturday 8 am to 5 pm</p>
+                </li>
+                <li>
+                  <p>Sundays 9 am to 5 pm (During Examination Time)</p>
+                </li>
+
+              </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-2 mx-auto">
+
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: blue;">contact us</h5>
+
+              <ul class="list-unstyled">
+                <li>
+                  <h6>+91-6303973431</h6>
+                </li>
+                <li>
+                  <h6>+91-6370504347</h6>
+                </li>
+                <li>
+                  <a href="#!">Email : sahooc300@gmail.com</a>
+                </li>
+
+              </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-2 mx-auto">
+
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: aqua;">Address</h5>
+
+              <ul class="list-unstyled" style="color: seagreen;">
+                <li>
+                 <h4>Takhatpur</h4>
+                </li>
+                <li>
+                  <h4>Baripada</h4>
+                </li>
+                <li>
+                  <h4>Mayurabhunj</h4>
+                </li>
+                <li>
+                <h4>Odisha</h4>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+        <hr>
+
+
+        <ul class="list-unstyled list-inline text-center py-2">
+          <li class="list-inline-item">
+            <h5 class="mb-1">Register for free</h5>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
+          </li>
+        </ul>
+        <!-- Call to action -->
+
+        <hr>
+
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline text-center">
+          <li class="list-inline-item">
+            <a class="btn-floating btn-fb mx-1">
+              <i class="fab fa-facebook-f"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-tw mx-1">
+              <i class="fab fa-twitter"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-gplus mx-1">
+              <i class="fab fa-google-plus-g"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-li mx-1">
+              <i class="fab fa-linkedin-in"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-dribbble mx-1">
+              <i class="fab fa-dribbble"> </i>
+            </a>
+          </li>
+        </ul>
+        <!-- Social buttons -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+          <a href="https://mdbootstrap.com/education/bootstrap/">Chandra Sekhar Sahoo</a>
+        </div>
+        <!-- Copyright -->
+
+      </footer>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

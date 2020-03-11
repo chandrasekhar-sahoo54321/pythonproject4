@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+      <a href="/jobs" data-toggle="tooltip" data-placement="top" title="see this"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhYsD6LL0vhwOjT9O4kMRvxhopL7AfPJN85eq4n24qyv-mKw21" style="height: 80px;width: 120px;"></a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="" style="margin-left: 40px;">Find Jobs<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#" style="margin-left: 40px;">Job Apply<span class="sr-only">(current)</span></a>
+      </li>
+     
+     <li class="nav-item dropdown">
+          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 40px;" data-toggle="tooltip" data-placement="top" title="Tap for courses">
+            RESUME SERVICES
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+            <a class="dropdown-item" href="/xpress">XPRESS RESUME+</a>
+            
+
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="">RIGHT RESUME</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="">CAREER BOOSTER</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="">RESUME HIGHLIGHTER</a>
+            
+          </div>
+        </li>
+       
+    </ul>
+    <ul class="navbar-nav ml-auto">
+     <li class="nav-item active">
+        <a class="nav-link" href="/em" style="margin-left: 200px;">Employers / Post Job<span class="sr-only">(current)</span></a>
+      </li>
+            {% if  user.is_authenticated %}
+            <li class="nav-item active">
+            <a href="" class="nav-link">welcome {{ user.username }}</a>
+            </li>
+                <li class="nav-item active">
+                    <a href="/logout/" class="nav-link">Logout</a>
+               </li>
+            {% else %}
+            <li class="nav-item active">
+                <a href="/register/" class="nav-link"><i class="fa fa-sign-in" aria-hidden="true"></i>Register</a>
+            </li>
+            <li class="nav-item active">
+                <a href="/login/" class="nav-link"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a>
+            </li>
+            {% endif %}
+        </ul>
+   
+  </div>
+    </nav>
+     <marquee><h2 style="color: red;">welcome to our job site.24 hours responsive.we will touch you every time.every time we update all job.</h2></marquee><br>
+  {% if user.is_authenticated %}
+     <form class="form-inline my-2 my-lg-0" id="search" action="/search" style="margin-left: 100px;">
+      <input class="form-control mr-sm-2" size="50" name="q" type="search" placeholder="Search Your Job" aria-label="Search">
+      <input type="submit" value="Search" class="btn btn-warning">
+    </form><br>
+    <div class="row">
+  <div class="col-md-12">
+  </div>
+  <div class="col-md-12">
+    {% for message in messages %}
+    <h3 class="font-weight-bold text-center text-white">{{message}}</h3>
+    {% endfor %}
+    {% if job %}
+  <table class="table table-striped table-dark">
+  <thead>
+    <th>Date</th>
+    <th>Company</th>
+    <th>Title</th>
+    <th>Eligibility</th>
+    <th>Address</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Action</th>
+  </thead>
+  {% for j in job %}
+  <tr>
+    <td>{{j.date}}</td>
+    <td>{{j.company}}</td>
+    <td>{{j.title}}</td>
+    <td>{{j.eligibility}}</td>
+    <td>{{j.address}}</td>
+    <td>{{j.email}}</td>
+    <td>{{j.phone}}</td>
+    <td><button type="button"  class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+      Apply Here
+     </button></td>
+  </tr>
+  {% endfor %}
+  </table>
+   {% else %}
+   <div class="alert alert-success" role="alert"">
+     <h4 class="font-weight-bold text-center text-dark">No Jobs Are Available !!!</h4>
+   <hr>
+   <h6 class="font-weight-bold text-center text-dark">I am very sorry for what happened. It was unacceptable and will never happen again.Opps Error 404.</h6>
+   </div>
+   </div>
+  {% endif %}  
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-success">
+        <h5 class="modal-title text-white" id="exampleModalLabel">Apply Here</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/apply/" method="post">
+          {% csrf_token %}
+          <div class="form-group">
+            <input type="text" name="name" class="form-control" placeholder="Enter Your Name">
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" class="form-control" placeholder="Enter your Email">
+          </div>
+          <div class="form-group">
+            <input type="number" name="mobile" class="form-control" placeholder="Enter your mobile number">
+          </div>
+          <div class="form-group">
+            <input type="date" name="birthday" class="form-control" placeholder="Enter your DOB">
+          </div>
+          <div class="d-flex flex-row bd-highlight mb-3">
+            Location : &nbsp;&nbsp;<select name="location">
+              <option>Select Location</option>
+              <option>Bhubaneswar</option>
+              <option>Kolkata</option>
+              <option>Hyderabad</option>
+              <option>Banglore</option>
+            </select>
+          </div>
+           <div class="d-flex flex-row bd-highlight mb-3">
+            Designation : &nbsp;&nbsp;<select name="designation">
+              <option>Select Designation</option>
+              <option>Python/Django developer</option>
+              <option>Java fullstack Developer</option>
+              <option>UI Developer</option>
+              <option>Angular Developer</option>
+              <option>AI</option>
+              <option>ML</option>
+              <option>DL</option>
+              <option>Data Science</option>
+              <option>Odoo Developer</option>
+              <option>Support Engineer</option>
+              <option>C developer</option>
+              <option>C++ developer</option>
+              <option>Angular Developer</option>
+              <option>Jira Developer</option>
+              <option>Flask Developer</option>
+              <option>React.js Developer</option>
+              <option>Vue.js Developer</option>
+              <option>Javascript developer</option>
+              <option>MySql developer</option>
+              <option>Oracle Developer</option>
+              <option>Mongo DB developer</option>
+              <option>Digital Marketing</option>
+            </select>
+          </div>
+           <div class="d-flex flex-row bd-highlight mb-3">
+            Qualification : &nbsp;&nbsp;<select name="qualification">
+              <option>Select Qualification</option>
+              <option>BCA</option>
+              <option>MCA</option>
+              <option>BBA</option>
+              <option>MBA</option>
+              <option>MSC</option>
+              <option>BSC</option>
+              <option>B.Tech</option>
+              <option>M.Tech</option>
+              <option>B.Com</option>
+              <option>M.Com</option>
+            </select>
+          </div>
+           <div class="d-flex flex-row bd-highlight mb-3">
+            Language : &nbsp;&nbsp;<select name="language">
+              <option>Select Language</option>
+              <option>English</option>
+              <option>Hindi</option>
+              <option>Odia</option>
+              <option>Kannada</option>
+              <option>Telugu</option>
+              <option>Marathi</option>
+              <option>Gujurathi</option>
+              <option>Bengali</option>
+              <option>Tamili</option>
+              <option>French</option>
+              <option>Malayalam</option>
+            </select>
+          </div>
+           <div class="d-flex flex-row bd-highlight mb-3">
+            Experience : &nbsp;&nbsp;<select name="experience">
+              <option>Select Experience</option>
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+          </div>
+          <div class="d-flex flex-row bd-highlight mb-3">
+            Nationality : &nbsp;&nbsp;<select name="nationality">
+              <option>Select Nationality</option>
+              <option>Indian</option>
+              <option>Japan</option>
+              <option>America</option>
+              <option>Austrelia</option>
+              <option>Srilanka</option>
+              <option>China</option>
+              <option>Bangaladesh</option>
+              <option>NezLand</option>
+              <option>South Africa</option>
+              <option>West Indies</option>
+            </select>
+          </div>
+          <div class="d-flex flex-row bd-highlight mb-3">
+            Year Of Passout : &nbsp;&nbsp;<select name="year_of_passout">
+              <option>Select year_of_passout</option>
+              <option>2008</option>
+              <option>2009</option>
+              <option>2010</option>
+              <option>2011</option>
+              <option>2012</option>
+              <option>2013</option>
+              <option>2014</option>
+              <option>2015</option>
+              <option>2017</option>
+              <option>2018</option>
+              <option>2019</option>
+              <option>2020</option>
+              <option>2021</option>
+              <option>2022</option>
+            </select>
+          </div>
+           <div class="d-flex flex-row bd-highlight mb-3">
+            Job Type : &nbsp;&nbsp;<select name="job_type">
+              <option>Select job_type</option>
+              <option>Full Time</option>
+              <option>Part Time</option>
+              <option>Remotly</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="text" name="current_ctc" class="form-control" placeholder="Enter Your current_ctc">
+          </div>
+          <div class="form-group">
+            <input type="text" name="expected_ctc" class="form-control" placeholder="Enter Your expected_ctc">
+          </div>
+
+
+          <div class="form-group">
+            <input type="radio" name="gender" value="M">Male
+            <input type="radio" name="gender" value="FM">Female
+            <input type="radio" name="gender" value="TG">Other
+          </div>
+          <input type="submit" name="Apply" class="btn btn-primary">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="col-md-2">
+    
+  </div>
+</div>
+{% endif %}
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="container" style="margin-left:500px;">
+      <div class="spinner-grow text-primary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-secondary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-success" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-danger" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-warning" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-info" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-light" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-dark" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+
+    </div>
+
+  </div>
+
+</div><br><br>
+
+<footer class="footer footer-expand-lg footer-dark bg-dark text-light">
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+
+          <!-- Grid row -->
+          <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-4 mx-auto">
+
+              <!-- Content -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: green;">Library Rules :</h5>
+              <p>Identity Card is compulsory for getting access to the library</p>
+              <p>Silence to be maintained</p>
+              <p>No discussion permitted inside the library</p>
+              <p>No personal belongings allowed inside the library</p>
+              <p>No discussion permitted inside the library</p>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-2 mx-auto">
+
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: green;">Working Hours of the Library</h5>
+
+              <ul class="list-unstyled" >
+                <li>
+                  <p>Monday to Friday 8 am to 9 pm (During Examination up to 10 PM)</p>
+                </li>
+                <li>
+                <p>Saturday 8 am to 5 pm</p>
+                </li>
+                <li>
+                  <p>Sundays 9 am to 5 pm (During Examination Time)</p>
+                </li>
+
+              </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-2 mx-auto">
+
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: blue;">contact us</h5>
+
+              <ul class="list-unstyled">
+                <li>
+                  <h6>+91-6303973431</h6>
+                </li>
+                <li>
+                  <h6>+91-6370504347</h6>
+                </li>
+                <li>
+                  <a href="#!">Email : sahooc300@gmail.com</a>
+                </li>
+
+              </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-2 mx-auto">
+
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: aqua;">Address</h5>
+
+              <ul class="list-unstyled" style="color: seagreen;">
+                <li>
+                 <h4>Takhatpur</h4>
+                </li>
+                <li>
+                  <h4>Baripada</h4>
+                </li>
+                <li>
+                  <h4>Mayurabhunj</h4>
+                </li>
+                <li>
+                <h4>Odisha</h4>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+        <hr>
+
+
+        <ul class="list-unstyled list-inline text-center py-2">
+          <li class="list-inline-item">
+            <h5 class="mb-1">Register for free</h5>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
+          </li>
+        </ul>
+        <!-- Call to action -->
+
+        <hr>
+
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline text-center">
+          <li class="list-inline-item">
+            <a class="btn-floating btn-fb mx-1">
+              <i class="fab fa-facebook-f"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-tw mx-1">
+              <i class="fab fa-twitter"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-gplus mx-1">
+              <i class="fab fa-google-plus-g"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-li mx-1">
+              <i class="fab fa-linkedin-in"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-dribbble mx-1">
+              <i class="fab fa-dribbble"> </i>
+            </a>
+          </li>
+        </ul>
+        <!-- Social buttons -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+          <a href="https://mdbootstrap.com/education/bootstrap/">Chandra Sekhar Sahoo</a>
+        </div>
+        <!-- Copyright -->
+
+      </footer>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

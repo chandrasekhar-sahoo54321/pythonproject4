@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+      <a href="/jobs" data-toggle="tooltip" data-placement="top" title="see this"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhYsD6LL0vhwOjT9O4kMRvxhopL7AfPJN85eq4n24qyv-mKw21" style="height: 80px;width: 120px;"></a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/job2" style="margin-left: 40px;">Find Jobs<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#" style="margin-left: 40px;">Job Apply<span class="sr-only">(current)</span></a>
+      </li>
+     
+     <li class="nav-item dropdown">
+          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 40px;" data-toggle="tooltip" data-placement="top" title="Tap for courses">
+            RESUME SERVICES
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+            <a class="dropdown-item" href="/xpress">XPRESS RESUME+</a>
+            
+
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="">RIGHT RESUME</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="">CAREER BOOSTER</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="">RESUME HIGHLIGHTER</a>
+            
+          </div>
+        </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="/findsalary" style="margin-left: 40px;">FIND SALARIES<span class="sr-only">(current)</span></a>
+      </li>
+     
+    </ul>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/em" style="margin-left: 200px;">Employers / Post Job<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+   
+  </div>
+    </nav>
+    <marquee><h2 style="color: red;">welcome to our job site.24 hours responsive.we will touch you every time.every time we update all job.</h2></marquee>
+       <div class="row ">
+       <div class="col-md-6" id="login" >
+           <div class="card animated pulse" style="margin-left: 40px;">
+               <div class="card-header bg-success"><h3>Login Here</h3> </div>
+               {% for message in messages%}
+                <h3 class="text-center font-weight-bold text-danger pt-3">{{message}}</h3>
+                {% endfor %}
+               <div class="card-body">
+                   <form action="" method="post" autocomplete="off">
+                    {% csrf_token %}
+                      <div class="form-group">
+                         <input type="text" name="username" placeholder="username" class="form-control">
+                      </div>
+                      <div class="form-group">
+                         <input type="password" name="password" placeholder="password" class="form-control"> 
+                      </div>
+                    <input type="submit" value="Login" class="btn btn-success" style="margin-left: 300px;"><h1 style="color: red; margin-left: 500px;">OR</h1>
+                 </form>
+               </div>
+           </div>
+       </div>
+       <div class="col-md-6">
+       <div class="container">
+       <h4 style="color: blue; margin-top: 80px;">if user does not exist then register here.</h4>
+      <a href="/register" class="btn btn-lg btn-success" style="margin-top: 20px;margin-left: 150px;">Register</a>
+
+       </div>
+         
+       </div>
+       
+   </div>
+   <a href=""><h5 class="card-title" style="margin-left: 600px;margin-top: 20px;">OUR CLIENTELE</h5></a><br>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    <div class="row">
+<div class="col-sm-3">
+<div class="card" style="width: 18rem;">
+ <a href=""> <img src="https://media.monsterindia.com/trex/prod-cdn/media/promotedemployer/2020/february/M8L4BxwfidHG6JFXe6utvR7Kyis9M71RZXFlPLOm.jpeg" class="card-img-top" alt="..."></a>
+  </div>
+</div>
+<div class="col-sm-3">
+<div class="card" style="width: 18rem;">
+  <a href=""><img src="https://media.monsterindia.com/trex/prod-cdn/media/promotedemployer/2020/january/24JXjBTNvJfSCxCXmMvPIjQTm3E4gue0bqfsbwWb.jpeg" class="card-img-top" alt="..."></a>
+  </div>
+</div>
+<div class="col-sm-3">
+<div class="card" style="width: 18rem;">
+ <a href=""> <img src="https://media.monsterindia.com/trex/prod-cdn/media/promotedemployer/2019/october/UanGTOckVXpP3TXnnzuQQxRCk3X7pDrmH270DHzr.jpeg" class="card-img-top" alt="..."></a>
+  </div>
+</div>
+<div class="col-sm-3">
+<div class="card" style="width: 18rem;">
+  <a href=""><img src="https://media.monsterindia.com/trex/prod-cdn/media/promotedemployer/2018/december/XkSMJw8d2HInBPXjlKFkLq53s3on11S6c5DiGHAl.jpeg" class="card-img-top" alt="..."></a>
+  </div>
+</div>
+   </div>
+   </div>
+    <div class="carousel-item">
+      <div class="row">
+<div class="col-sm-3">
+<div class="card" style="width: 18rem;">
+ <a href=""> <img src="https://media.monsterindia.com/trex/prod-cdn/media/promotedemployer/2020/january/mv6ZjgkYdMZfcLcSu2ODTPrB2W8TuQ7LkYZRt6Aq.jpeg" class="card-img-top" alt="..."></a>
+  </div>
+</div>
+<div class="col-sm-3">
+<div class="card" style="width: 18rem;">
+  <a href=""><img src="https://media.monsterindia.com/trex/prod-cdn/media/promotedemployer/2020/january/GPsmdEevBSNUWGG5uiJMUZAoLa6ADy9ZSkzPI2Ja.jpeg" class="card-img-top" alt="..."></a>
+  </div>
+</div>
+<div class="col-sm-3">
+<div class="card" style="width: 18rem;">
+ <a href=""> <img src="https://media.monsterindia.com/trex/prod-cdn/media/promotedemployer/2019/june/w3sFOiCljzADX9GiJEq3BiVZhc1pjBxURK07rovr.jpeg" class="card-img-top" alt="..."></a>
+  </div>
+</div>
+<div class="col-sm-3">
+<div class="card" style="width: 18rem;">
+ <a href=""> <img src="https://media.monsterindia.com/trex/prod-cdn/media/promotedemployer/2020/february/Q5d1Ksr2639HYZYnINSPswZrYroKpuXVKxsdAUHy.jpeg" class="card-img-top" alt="..."></a>
+  </div>
+</div>
+   </div>
+    </div>
+  </div>
+</div><br>
+<p style="color: green;margin-left: 40px;margin-top: 40px;">Jobs by Locations : Jobs in Bangalore | Jobs in Delhi | Jobs in Mumbai | Jobs in Chennai | Jobs in Hyderabad | Jobs in Kolkata | Jobs in Pune | Jobs in Chandigarh | Jobs in Lucknow | Jobs in Coimbatore</p><br>
+<div class="row">
+  <div class="col-md-12">
+    <div class="container" style="margin-left:500px;">
+      <div class="spinner-grow text-primary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-secondary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-success" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-danger" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-warning" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-info" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-light" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-dark" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+
+    </div>
+
+  </div>
+
+</div><br><br>
+<footer class="footer footer-expand-lg footer-dark bg-dark text-light">
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+
+          <!-- Grid row -->
+          <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-4 mx-auto">
+
+              <!-- Content -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: green;">Library Rules :</h5>
+              <p>Identity Card is compulsory for getting access to the library</p>
+              <p>Silence to be maintained</p>
+              <p>No discussion permitted inside the library</p>
+              <p>No personal belongings allowed inside the library</p>
+              <p>No discussion permitted inside the library</p>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-2 mx-auto">
+
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: green;">Working Hours of the Library</h5>
+
+              <ul class="list-unstyled" >
+                <li>
+                  <p>Monday to Friday 8 am to 9 pm (During Examination up to 10 PM)</p>
+                </li>
+                <li>
+                <p>Saturday 8 am to 5 pm</p>
+                </li>
+                <li>
+                  <p>Sundays 9 am to 5 pm (During Examination Time)</p>
+                </li>
+
+              </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-2 mx-auto">
+
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: blue;">contact us</h5>
+
+              <ul class="list-unstyled">
+                <li>
+                  <h6>+91-6303973431</h6>
+                </li>
+                <li>
+                  <h6>+91-6370504347</h6>
+                </li>
+                <li>
+                  <a href="#!">Email : sahooc300@gmail.com</a>
+                </li>
+
+              </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-2 mx-auto">
+
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: aqua;">Address</h5>
+
+              <ul class="list-unstyled" style="color: seagreen;">
+                <li>
+                 <h4>Takhatpur</h4>
+                </li>
+                <li>
+                  <h4>Baripada</h4>
+                </li>
+                <li>
+                  <h4>Mayurabhunj</h4>
+                </li>
+                <li>
+                <h4>Odisha</h4>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+        <hr>
+
+
+        <ul class="list-unstyled list-inline text-center py-2">
+          <li class="list-inline-item">
+            <h5 class="mb-1">Register for free</h5>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
+          </li>
+        </ul>
+        <!-- Call to action -->
+
+        <hr>
+
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline text-center">
+          <li class="list-inline-item">
+            <a class="btn-floating btn-fb mx-1">
+              <i class="fab fa-facebook-f"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-tw mx-1">
+              <i class="fab fa-twitter"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-gplus mx-1">
+              <i class="fab fa-google-plus-g"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-li mx-1">
+              <i class="fab fa-linkedin-in"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-dribbble mx-1">
+              <i class="fab fa-dribbble"> </i>
+            </a>
+          </li>
+        </ul>
+        <!-- Social buttons -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+          <a href="https://mdbootstrap.com/education/bootstrap/">Chandra Sekhar Sahoo</a>
+        </div>
+        <!-- Copyright -->
+
+      </footer>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+      <a href="/jobs" data-toggle="tooltip" data-placement="top" title="see this"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhYsD6LL0vhwOjT9O4kMRvxhopL7AfPJN85eq4n24qyv-mKw21" style="height: 80px;width: 120px;"></a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="" style="margin-left: 40px;">Find Jobs<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#" style="margin-left: 40px;">Job Apply<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 60px;" data-toggle="tooltip" data-placement="top" title="Tap for courses">
+            CAREER TIPS
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+            <a class="dropdown-item" href="" >JOB SEARCH STRATEGY</a>
+            
+
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="">RESUME & COVER LETTER</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="">INTERVIEW TIPS</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="">SALARY NEGOTIATION</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="">CAREER MANAGEMENT</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="">RESUME SERVICES</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="">RESEARCH REPORTS</a>
+            
+          </div>
+        </li>
+     <li class="nav-item dropdown">
+          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 40px;" data-toggle="tooltip" data-placement="top" title="Tap for courses">
+            RESUME SERVICES
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+            <a class="dropdown-item" href="/xpress">XPRESS RESUME+</a>
+            
+
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="">RIGHT RESUME</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="">CAREER BOOSTER</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="">RESUME HIGHLIGHTER</a>
+            
+          </div>
+        </li>
+       
+    </ul>
+    <ul class="navbar-nav ml-auto">
+     <li class="nav-item active">
+        <a class="nav-link" href="/em" style="margin-left: 200px;">Employers / Post Job<span class="sr-only">(current)</span></a>
+      </li>
+            {% if  user.is_authenticated %}
+            <li class="nav-item active">
+            <a href="" class="nav-link">welcome {{ user.username }}</a>
+            </li>
+                <li class="nav-item active">
+                    <a href="/logout/" class="nav-link">Logout</a>
+               </li>
+            {% else %}
+            <li class="nav-item active">
+                <a href="/register/" class="nav-link"><i class="fa fa-sign-in" aria-hidden="true"></i>Register</a>
+            </li>
+            <li class="nav-item active">
+                <a href="/login/" class="nav-link"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a>
+            </li>
+            {% endif %}
+        </ul>
+   
+  </div>
+    </nav>
+     <h1 style="margin-left: 500px; color: green;"><u>CURRICULUM VITAE</u></h1><br><br><br>
+    <div class="row">
+    <div class="col-md-6">
+    <h4 style="color: blue; margin-left: 80px;">CHANDRA SEKHAR SAHOO</h4>
+    <h6 style="margin-left: 80px;">Location   :- Electronic city, Bangalore</h6>
+    <h6 style="margin-left: 80px;">PIN - 560100</h6>
+    <h6 style="margin-left: 80px;">Mob:- +91-6370504347</h6>
+    <h6 style="margin-left: 80px;">Email : - <a href="">sahooc300@gmail.com</a></h6>
+    <h6 style="margin-left: 80px;">Linked In : - <a href="linkedin.com">https://www.linkedin.com/in/chandra-sekhar-sahoo-784714173/</a></h6> 
+    <h6 style="margin-left: 80px;">GitHub : - <a href="">https://github.com/chandrasekhar-sahoo</a></h6> 
+    </div>
+    <div class="col-md-6">
+    <img src="https://avatars1.githubusercontent.com/u/51793982?s=460&v=4" style="height: 120px; width: 120px;">
+      
+    </div>
+      
+    </div><hr><br><br>
+    <h5 style="margin-left: 80px;"><u>CAREER OBJECTIVE</u></h5>
+    <ul>
+      <li style="margin-left: 80px;"><p>I look forward to associate myself with an organization where there is an opportunity for personal</p> and professional development and contribute my skills & energy for the organization’s achievements.</li>
+    </ul>
+    <h5 style="margin-left: 80px;"><u>ACADEMIC QUALIFICATION</u></h5>
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Examination</th>
+      <th scope="col">Board/University</th>
+      <th scope="col">School/College</th>
+      <th scope="col">Year of Passing</th>
+      <th scope="col">Percentage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">10th</th>
+      <td>BSE ODISHA</td>
+      <td>A.M High School</td>
+      <td>2013</td>
+      <td>58%</td>
+    </tr>
+    <tr>
+      <th scope="row">+2 Science</th>
+      <td>CHSE ODISHA</td>
+      <td>A.N College</td>
+      <td>2015</td>
+      <td>47%</td>
+    </tr>
+    <tr>
+      <th scope="row">+3 BCA</th>
+      <td>F.M University</td>
+      <td>Bhadrak Auto College</td>
+      <td>2018</td>
+      <td>62%</td>
+    </tr>
+    <tr>
+      <th scope="row">PG (MCA)</th>
+      <td>NOU University</td>
+      <td>MPC Auto College</td>
+      <td>2020</td>
+      <td>70%</td>
+    </tr>
+  </tbody>
+</table>
+<h5 style="margin-left: 80px;"><u>HOBBY</u></h5>
+<p style="margin-left: 120px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp; Reading Books</p>
+<p style="margin-left: 120px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp; Listening Music</p>
+<p style="margin-left: 120px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp; Playing Cricket</p>
+<h5 style="margin-left: 80px;"><u>STRENGTHS</u></h5>
+<p style="margin-left: 120px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp; Self Confident</p>
+<p style="margin-left: 120px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp; Hard Working</p>
+<p style="margin-left: 120px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp; Good Communication </p>
+<p style="margin-left: 120px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp; Patience</p>
+<p style="margin-left: 120px;"><img src="https://sssit.org/images/check.png">&nbsp;&nbsp; Punctual</p>
+<h5 style="margin-left: 80px;"><u>PERSONAL VITAE</u></h5>
+<h6 style="margin-left: 120px;">Father’s Name : Budhiram Sahoo</h6>
+<h6 style="margin-left: 120px;">Sex : Male</h6>
+<h6 style="margin-left: 120px;">Date of Birth : 05-05-1998</h6>
+<h6 style="margin-left: 120px;">Marital Status : UnMarried</h6>
+<h6 style="margin-left: 120px;">Religion : Hindu</h6>
+<h6 style="margin-left: 120px;">Nationality : Indian</h6>
+<h6 style="margin-left: 120px;">Language Proficiency : English, Hindi and Oriya</h6>
+<h5 style="margin-left: 80px;"><u>DECLARATION</u></h5>
+<ul>
+  <li style="margin-left: 80px;"><p>I do hereby declare that all the statements furnished in this Bio-data</p>
+   are true to the best of my knowledge and belief.</li>
+</ul>
+<h6 style="margin-left: 80px;">Place : Bangalore</h6>
+<h6 style="margin-left: 900px;">Chandra Sekhar Sahoo</h6><br><br>
+<div class="row">
+<div class="col-sm-12">
+<h5 style="color: red;margin-left: 400px;">If you want to this type of resume then enquiry.<a href="/enquiry" class="btn btn-lg btn-success" >Enquiry</a>
+</h5>
+  
+</div>
+  
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="container" style="margin-left:500px;">
+      <div class="spinner-grow text-primary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-secondary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-success" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-danger" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-warning" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-info" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-light" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-dark" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+
+    </div>
+
+  </div>
+
+</div><br><br>
+
+<footer class="footer footer-expand-lg footer-dark bg-dark text-light">
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+
+          <!-- Grid row -->
+          <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-4 mx-auto">
+
+              <!-- Content -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: green;">Library Rules :</h5>
+              <p>Identity Card is compulsory for getting access to the library</p>
+              <p>Silence to be maintained</p>
+              <p>No discussion permitted inside the library</p>
+              <p>No personal belongings allowed inside the library</p>
+              <p>No discussion permitted inside the library</p>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-2 mx-auto">
+
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: green;">Working Hours of the Library</h5>
+
+              <ul class="list-unstyled" >
+                <li>
+                  <p>Monday to Friday 8 am to 9 pm (During Examination up to 10 PM)</p>
+                </li>
+                <li>
+                <p>Saturday 8 am to 5 pm</p>
+                </li>
+                <li>
+                  <p>Sundays 9 am to 5 pm (During Examination Time)</p>
+                </li>
+
+              </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-2 mx-auto">
+
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: blue;">contact us</h5>
+
+              <ul class="list-unstyled">
+                <li>
+                  <h6>+91-6303973431</h6>
+                </li>
+                <li>
+                  <h6>+91-6370504347</h6>
+                </li>
+                <li>
+                  <a href="#!">Email : sahooc300@gmail.com</a>
+                </li>
+
+              </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-2 mx-auto">
+
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: aqua;">Address</h5>
+
+              <ul class="list-unstyled" style="color: seagreen;">
+                <li>
+                 <h4>Takhatpur</h4>
+                </li>
+                <li>
+                  <h4>Baripada</h4>
+                </li>
+                <li>
+                  <h4>Mayurabhunj</h4>
+                </li>
+                <li>
+                <h4>Odisha</h4>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+        <hr>
+
+
+        <ul class="list-unstyled list-inline text-center py-2">
+          <li class="list-inline-item">
+            <h5 class="mb-1">Register for free</h5>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
+          </li>
+        </ul>
+        <!-- Call to action -->
+
+        <hr>
+
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline text-center">
+          <li class="list-inline-item">
+            <a class="btn-floating btn-fb mx-1">
+              <i class="fab fa-facebook-f"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-tw mx-1">
+              <i class="fab fa-twitter"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-gplus mx-1">
+              <i class="fab fa-google-plus-g"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-li mx-1">
+              <i class="fab fa-linkedin-in"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-dribbble mx-1">
+              <i class="fab fa-dribbble"> </i>
+            </a>
+          </li>
+        </ul>
+        <!-- Social buttons -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+          <a href="https://mdbootstrap.com/education/bootstrap/">Chandra Sekhar Sahoo</a>
+        </div>
+        <!-- Copyright -->
+
+      </footer>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
